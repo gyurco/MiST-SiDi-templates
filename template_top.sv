@@ -88,6 +88,12 @@ localparam VGA_BITS = 8;
 localparam VGA_BITS = 6;
 `endif
 
+`ifdef BIG_OSD
+localparam bit BIG_OSD = 1;
+`else
+localparam bit BIG_OSD = 0;
+`endif
+
 // remove this if the 2nd chip is actually used
 `ifdef DUAL_SDRAM
 assign SDRAM2_A = 13'hZZZZ;

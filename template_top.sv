@@ -86,6 +86,10 @@ module template_top(
 `ifdef USE_AUDIO_IN
 	input         AUDIO_IN,
 `endif
+`ifdef USE_MIDI_PINS
+	input         MIDI_IN,
+	output        MIDI_OUT,
+`endif
 	input         UART_RX,
 	output        UART_TX
 
@@ -130,6 +134,12 @@ localparam bit BIG_OSD = 0;
 localparam bit USE_AUDIO_IN = 1;
 `else
 localparam bit USE_AUDIO_IN = 0;
+`endif
+
+`ifdef USE_MIDI_PINS
+localparam bit USE_MIDI_PINS = 1;
+`else
+localparam bit USE_MIDI_PINS = 0;
 `endif
 
 // remove this if the 2nd chip is actually used

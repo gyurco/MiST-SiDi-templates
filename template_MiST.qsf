@@ -256,6 +256,12 @@ set_instance_assignment -name FAST_INPUT_REGISTER ON -to SDRAM_DQ[13]
 set_instance_assignment -name FAST_INPUT_REGISTER ON -to SDRAM_DQ[14]
 set_instance_assignment -name FAST_INPUT_REGISTER ON -to SDRAM_DQ[15]
 
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to VGA_R[*]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to VGA_G[*]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to VGA_B[*]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to VGA_HS
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to VGA_VS
+
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to SPI_DO
 set_instance_assignment -name FAST_OUTPUT_ENABLE_REGISTER ON -to SPI_DO
 set_instance_assignment -name FAST_INPUT_REGISTER ON -to SPI_DO

@@ -90,6 +90,12 @@ module template_top(
 	input         MIDI_IN,
 	output        MIDI_OUT,
 `endif
+`ifdef SIDI128_EXPANSION
+	input         UART_CTS,
+	output        UART_RTS,
+	inout         EXP7,
+	inout         MOTOR_CTRL,
+`endif
 	input         UART_RX,
 	output        UART_TX
 
